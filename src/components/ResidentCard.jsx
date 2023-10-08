@@ -20,7 +20,7 @@ export const ResidentCard = ({ residentEndpoint }) => {
   }, []);
 
   return (
-    <article>
+    <article className="border-2 border-green-400 text-white">
       <header className="relative">
         <img src={resident?.image} alt="" />
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white px-5 py-2 rounded-md bg-black/60 flex items-center gap-2">
@@ -47,6 +47,8 @@ export const ResidentCard = ({ residentEndpoint }) => {
           </li>
         </ul>
       </div>
+      
     </article>
+
   );
 };
