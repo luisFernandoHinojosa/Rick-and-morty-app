@@ -9,3 +9,15 @@
     background-position: center;
     background-size: cover;
 }
+
+.front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+
+}
+
+.back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+
+}

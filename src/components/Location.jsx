@@ -31,6 +31,7 @@ export const Location = ({ location, setLocation }) => {
           className="text-black w-full"
           type="text"
           value={searchText}
+          autoComplete="off"
           onChange={(e) => setSearchText(e.target.value)}
         />
         <span className="flex gap-2 items-center">
