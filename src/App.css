@@ -10,14 +10,78 @@
     background-size: cover;
 }
 
-.front{
-    transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0 5px 10px #000;
-
+.font-style{
+    font-family: 'Chakra Petch', sans-serif;
 }
 
-.back{
-    transform: perspective(600px) rotateY(180deg);
-    background: rgb(3, 35, 54);
 
+.card{
+    transition: transform 2000ms;
+    transform-style: preserve-3d;
+    perspective: 500px;
 }
+
+.card:hover{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back{
+    backface-visibility: hidden;
+}
+
+.card-back{
+    transform: rotateY(-180deg);
+}
+
+@keyframes animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animation {
+    animation: animation 8s linear infinite;
+  }
+
+.font-style{
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+
+.card{
+    transition: transform 2000ms;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back{
+    backface-visibility: hidden;
+}
+
+.card-back{
+    transform: rotateY(-180deg);
+}
+
+@keyframes animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animation {
+    animation: animation 8s linear infinite;
+  }

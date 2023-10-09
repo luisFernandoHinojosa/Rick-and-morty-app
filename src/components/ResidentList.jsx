@@ -9,13 +9,14 @@ export const ResidentList = ({ residents }) => {
   useEffect(()=>{
     setCurrentPage(1)
   },[residents])
+  console.log("residentes ",residents)
 
   return (
     <section className="overflow-hidden bg2">
       <div>
         <img src="" alt="" />
       </div>
-      <section className="grid grid-cols-[repeat(auto-fit,_280px)] justify-center gap-6 max-w-[1000px] py-10 mx-auto ">
+      <section className="grid grid-cols-[repeat(auto-fit,_280px)] justify-center gap-6 max-w-[1000px] py-10 mx-auto">
         {/* justify-center */}
         {residentsInPage.map((resident) => (
           <ResidentCard key={resident} residentEndpoint={resident} />
