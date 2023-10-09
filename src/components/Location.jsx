@@ -46,7 +46,7 @@ export const Location = ({ location, setLocation }) => {
     }
   },[suggestionIndex])
  
-  
+  //brrrrrrrrrrrr mmmmmm
 
   return (
     <section className="bg1 text-white flex flex-col items-center  gap-10 px-5">
