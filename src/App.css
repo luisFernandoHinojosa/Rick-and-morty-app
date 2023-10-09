@@ -9,3 +9,41 @@
     background-position: center;
     background-size: cover;
 }
+
+.font-style{
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+
+.card{
+    transition: transform 2000ms;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back{
+    backface-visibility: hidden;
+}
+
+.card-back{
+    transform: rotateY(-180deg);
+}
+
+@keyframes animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animation {
+    animation: animation 8s linear infinite;
+  }

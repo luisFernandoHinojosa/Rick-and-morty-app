@@ -1,11 +1,11 @@
-export const SuggestionCard = ({ suggestion, setSearchText, setLocation }) => {
+export const SuggestionCard = ({ suggestion, setSearchText, setLocation,currentSuggeSelect }) => {
   return (
     <li
       onClick={() => {
-        setSearchText(suggestion.name);
+        setSearchText("");//suggestion.name
         setLocation(suggestion);
       }}
-      className="cursor-pointer border-2 border-red-200"
+      className={`cursor-pointer  ${currentSuggeSelect&&"bg-green-950"}`}
     >
       {suggestion.name}
     </li>

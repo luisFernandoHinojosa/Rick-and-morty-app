@@ -15,7 +15,7 @@ function App() {
   },[])
 
   return (
-    <main className='min-h-screen'>
+    <main className='min-h-screen font-style'>
       <Location location={location} setLocation={setLocation}/>
       <ResidentList residents={location?.residents??[]}/>
     </main>
