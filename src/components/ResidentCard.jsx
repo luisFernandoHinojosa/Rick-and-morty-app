@@ -1,5 +1,4 @@
 import { IconArrowsLeftRight } from "@tabler/icons-react";
-//import { data } from "autoprefixer";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -8,8 +7,6 @@ export const ResidentCard = ({ residentEndpoint }) => {
   const [episodeDetails, setEpisodeDetails] = useState(null);
   const [rotateCard, setRotateCard] = useState(false);
 
-  console.log("re",resident)
-  console.log("roool",episodeDetails)
   const status = {
     Alive: "bg-green-500",
     Dead: "bg-red-500",
