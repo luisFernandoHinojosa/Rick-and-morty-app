@@ -59,7 +59,6 @@ export const Location = ({ location, setLocation }) => {
           type="text"
           value={searchText}
           autoComplete="off"
-          autoComplete="off"
           ref={input}
           onChange={(e) => setSearchText(e.target.value)}
         />
