@@ -48,12 +48,12 @@ export const Location = ({ location, setLocation }) => {
   return (
     <section className="relative bg1 text-white flex flex-col items-center justify-end gap-10 px-5 overflow-hidden w-full h-[450px]">
       <div className="fixed w-[300px] h-[200px] top-0 ">
-        <img src="../public/portal.png" alt="portal" className="animation" />
+        <img src="/portal.png" alt="portal" className="animation" />
         <div className="absolute top-5 ">
-        <img src="../public/logo2.png" alt="rm" />
+        <img src="/logo2.png" alt="rm" />
         </div>
         <div className="absolute h-full top-24 grid items-center px-6 ">
-          <img src="../public/logo.png" alt="title" />
+          <img src="/logo.png" alt="title" />
         </div>
       </div>
 
