@@ -1,12 +1,15 @@
 import { IconArrowsLeftRight } from "@tabler/icons-react";
+//import { data } from "autoprefixer";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
 export const ResidentCard = ({ residentEndpoint }) => {
   const [resident, setResident] = useState(null);
+  const [episodeDetails, setEpisodeDetails] = useState(null);
   const [rotateCard, setRotateCard] = useState(false);
 
-  //console.log(residentEndpoint)
+  console.log("re",resident)
+  console.log("roool",episodeDetails)
   const status = {
     Alive: "bg-green-500",
     Dead: "bg-red-500",
@@ -16,7 +19,15 @@ export const ResidentCard = ({ residentEndpoint }) => {
   useEffect(() => {
     axios
       .get(residentEndpoint)
-      .then(({ data }) => setResident(data))
+      .then(({ data }) => {
+        setResident(data);
+  
+        if (data.episode.length > 0) {
+          axios.get(data.episode[0])
+            .then(({ data }) => setEpisodeDetails(data))
+            .catch((err) => console.log(err));
+        }
+      })
       .catch((err) => console.log(err));
   }, []);
 
@@ -62,10 +73,25 @@ export const ResidentCard = ({ residentEndpoint }) => {
         </div>
       </article>
       <article className="absolute w-full h-full top-0 grid text-center items-center card-back text-white border-2 border-green-400 ">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-          expedita, iste, odio omnis laborum qui asperiores deleniti facilis
-          voluptates excepturi hic ab molestias dolorum rem laboriosam autem.
-          Voluptates, vitae nam.
+        <div>
+          <ul>
+             <li>
+                {" "}
+                <span>Name: </span>
+                <span>{episodeDetails?.name}</span>
+             </li>
+             <li>
+                {" "}
+                <span>Air Date: </span>
+                <span>{episodeDetails?.air_date}</span>
+             </li>
+             <li>
+                {" "}
+                <span>Episode: </span>
+                <span>{episodeDetails?.episode}</span>
+             </li>
+          </ul>
+        </div>
         </article>
         </section>
     </section>
