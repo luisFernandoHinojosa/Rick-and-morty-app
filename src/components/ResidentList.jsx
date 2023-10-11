@@ -2,11 +2,6 @@ import { useEffect, useState } from "react";
 import { ResidentCard } from "./ResidentCard";
 import { paginationLogic } from "../utils/pagination";
 import { ButtonsToShow } from "../utils/ButtonsToShow";
-import { PreviousNextButton } from "../utils/PreviousNextButton";
-import {
-  IconArrowBigLeftFilled,
-  IconArrowBigRightFilled,
-} from "@tabler/icons-react";
 
 export const ResidentList = ({ residents }) => {
   const [currentPage, setCurrentPage] = useState(1);

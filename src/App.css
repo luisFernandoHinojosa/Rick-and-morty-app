@@ -38,10 +38,6 @@ body::-webkit-scrollbar-thumb:hover{
     transform-style: preserve-3d;
 }
 
-.card:hover{
-    cursor: pointer;
-      /*rotateZ(180deg)*/
-}
 
 .rotate{
     transform: rotateY(180deg) ;
@@ -74,16 +70,8 @@ body::-webkit-scrollbar-thumb:hover{
 }
 
 
-.card{
-    transition: transform 2000ms;
-    transform-style: preserve-3d;
-    perspective: 500px;
-}
 
-.card:hover{
-    cursor: pointer;
-    transform: rotateY(180deg);
-}
+
 
 .card-front,
 .card-back{
