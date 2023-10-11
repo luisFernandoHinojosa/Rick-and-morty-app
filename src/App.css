@@ -1,3 +1,15 @@
+body::-webkit-scrollbar{
+    width: 5px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 255, 0);
+    border-radius: 8px;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background-color:rgb(1, 151, 1); ;
+}
+
+
 .bg1{
     background-image: url("/public/bg1.jpg");
     background-size: cover;
@@ -39,6 +51,36 @@
 
 .card-back{
     transform: rotateY(180deg) ;/*rotateZ(180deg)*/
+}
+
+@keyframes animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animation {
+    animation: animation 8s linear infinite;
+  }
+
+.font-style{
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+
+
+
+
+.card-front,
+.card-back{
+    backface-visibility: hidden;
+}
+
+.card-back{
+    transform: rotateY(-180deg);
 }
 
 @keyframes animation {
