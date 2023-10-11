@@ -11,9 +11,11 @@ body::-webkit-scrollbar-thumb:hover{
 
 
 .bg1{
-    background-image: url("/public/bg1.jpg");
+    background-image: url("/public/bg3.jpg");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+   background-attachment: fixed; 
 }
 
 .bg2{
@@ -26,16 +28,23 @@ body::-webkit-scrollbar-thumb:hover{
     font-family: 'Chakra Petch', sans-serif;
 }
 
+.container {
+    perspective: 500px;
+}
+
 
 .card{
-    transition: transform 2000ms;
+    transition: transform 600ms;
     transform-style: preserve-3d;
-    perspective: 500px;
 }
 
 .card:hover{
     cursor: pointer;
-    transform: rotateY(180deg);
+      /*rotateZ(180deg)*/
+}
+
+.rotate{
+    transform: rotateY(180deg) ;
 }
 
 .card-front,
@@ -44,7 +53,7 @@ body::-webkit-scrollbar-thumb:hover{
 }
 
 .card-back{
-    transform: rotateY(-180deg);
+    transform: rotateY(180deg) ;/*rotateZ(180deg)*/
 }
 
 @keyframes animation {
