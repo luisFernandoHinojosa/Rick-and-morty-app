@@ -77,17 +77,17 @@ export const ResidentCard = ({ residentEndpoint }) => {
           <ul>
              <li>
                 {" "}
-                <span>Name: </span>
+                <span className="text-orange-500 font-bold">Name: </span>
                 <span>{episodeDetails?.name}</span>
              </li>
              <li>
                 {" "}
-                <span>Air Date: </span>
+                <span className="text-orange-500 font-bold">Air Date: </span>
                 <span>{episodeDetails?.air_date}</span>
              </li>
              <li>
                 {" "}
-                <span>Episode: </span>
+                <span className="text-orange-500 font-bold">Episode: </span>
                 <span>{episodeDetails?.episode}</span>
              </li>
           </ul>
