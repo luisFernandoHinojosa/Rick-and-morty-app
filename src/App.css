@@ -19,6 +19,7 @@ body::-webkit-scrollbar-thumb:hover{
    
 }
 
+
 .bg2{
     background-image: url("/public/bg2.jpg");
     background-size: cover;
