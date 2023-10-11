@@ -1,8 +1,10 @@
+import { IconArrowsLeftRight } from "@tabler/icons-react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
 export const ResidentCard = ({ residentEndpoint }) => {
   const [resident, setResident] = useState(null);
+  const [rotateCard, setRotateCard] = useState(false);
 
   //console.log(residentEndpoint)
   const status = {
@@ -18,8 +20,15 @@ export const ResidentCard = ({ residentEndpoint }) => {
       .catch((err) => console.log(err));
   }, []);
 
+  const handleRotateCard = ()=>{
+    setRotateCard(!rotateCard)
+  }
+
   return (
-    <section className="relative card">
+    <section className="relative container">
+      <button onClick={handleRotateCard} className="relative left-1/2 
+      -translate-x-1/2 text-orange-600 hover:bg-slate-300/20"><IconArrowsLeftRight/></button>
+      <section className={`card ${rotateCard&&("rotate")}`}>
       <article className="relative border-2 border-green-400 text-white card-front">
         <header className="relative">
           <img src={resident?.image} alt="" />
@@ -58,6 +67,7 @@ export const ResidentCard = ({ residentEndpoint }) => {
           voluptates excepturi hic ab molestias dolorum rem laboriosam autem.
           Voluptates, vitae nam.
         </article>
+        </section>
     </section>
   );
 };

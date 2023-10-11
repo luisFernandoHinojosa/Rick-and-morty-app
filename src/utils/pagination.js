@@ -5,7 +5,7 @@
   const pages = []
   if(residents.length === 0){
     return{
-      pages: [1],
+      pages: [],
       residentsInPage:[]
     }
   }
@@ -25,9 +25,18 @@
     pages.push(i)
   }
 
+  const maxButtons = 5
+  const pageStart = Math.max(1, currentPage - Math.floor(maxButtons / 2))
+  console.log("pageStar", pageStart)
+
+  const pageEnd = Math.min(pages.length, pageStart + maxButtons-1)
+  console.log("pageEnd", pageEnd)
+
   return{
     residentsInPage,
     pages,
+    pageStart,
+    pageEnd,
   }
 
 }
