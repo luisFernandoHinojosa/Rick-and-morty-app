@@ -28,7 +28,7 @@ export const ResidentCard = ({ residentEndpoint }) => {
     <section className="relative container">
       <button onClick={handleRotateCard} className="relative left-1/2 
       -translate-x-1/2 text-orange-600 hover:bg-slate-300/20"><IconArrowsLeftRight/></button>
-      <section className={`card ${rotateCard&&("rotate")}`}>
+      <section className={`cursor-pointer card ${rotateCard&&("rotate")}`}>
       <article className="relative border-2 border-green-400 text-white card-front">
         <header className="relative">
           <img src={resident?.image} alt="" />

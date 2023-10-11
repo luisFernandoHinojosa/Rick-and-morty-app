@@ -1,15 +1,17 @@
 .bg1{
-    background-image: url("/public/bg3.jpg");
-    background-position: center;
+    background-image: url("/public/bg1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-   background-attachment: fixed; 
+    background-attachment: fixed;
+    background-position: center;
+   
 }
 
 .bg2{
     background-image: url("/public/bg2.jpg");
-    background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .font-style{
@@ -24,11 +26,6 @@
 .card{
     transition: transform 600ms;
     transform-style: preserve-3d;
-}
-
-.card:hover{
-    cursor: pointer;
-      /*rotateZ(180deg)*/
 }
 
 .rotate{

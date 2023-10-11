@@ -46,21 +46,21 @@ export const Location = ({ location, setLocation }) => {
   }, [suggestionIndex]);
 
   return (
-    <section className=" bg1 text-white flex flex-col items-center gap-10 px-5 overflow-hidden ">
-      <div className="w-[400px] bottom-[50px] relative ">
+    <section className="relative bg1 text-white flex flex-col items-center justify-end gap-10 px-5 overflow-hidden w-full h-[450px]">
+      <div className="fixed w-[300px] h-[200px] top-0 ">
         <img src="/public/portal.png" alt="" className="animation" />
         <div className="absolute top-5 ">
-          <img src="/public/logo2.png" alt="" />
+        <img src="/public/logo2.png" alt="" />
         </div>
         <div className="absolute h-full top-24 grid items-center px-6 ">
           <img src="/public/logo.png" alt="" />
         </div>
       </div>
 
-      <section className=" relative bg1 w-full md:w-1/2 lg:w-1/3">
+      <section className="relative grid w-[250px]  md:w-1/2 lg:w-1/3 ">
         <div>
           <form
-            className="relative flex border-2 border-green-400  overflow-hidden w-full h-10"
+            className="absolute flex border-2 border-green-400  overflow-hidden w-full h-10 bottom-0"
             onKeyDown={handleKeySuggestions}
           >
             <input
@@ -75,7 +75,7 @@ export const Location = ({ location, setLocation }) => {
           </form>
         </div>
         {suggestions.length > 0 && (
-          <ul className="absolute bg-[#376952] text-center  w-full max-h-36 overflow-y-auto scrollbar-thumb-green-800 scrollbar-track-green-400 scrollbar-w-2 scrollbar-thumb-rounded-md text-white">
+          <ul className="absolute bg-[#376952] text-center  w-full max-h-36 overflow-y-auto scrollbar-thumb-green-800 scrollbar-track-green-400 scrollbar-w-2 scrollbar-thumb-rounded-md text-white z-10">
             {suggestions.map((suggestion, index) => (
               <SuggestionCard
                 key={suggestion.id}
@@ -89,7 +89,7 @@ export const Location = ({ location, setLocation }) => {
         )}
       </section>
 
-      <section className="text-center bg-black/60 grid gap-3 border-2 border-green-400 py-5 px-8 md:px-14">
+      <section className="relative text-center bg-black/60 grid gap-3 border-2  border-green-400 py-5 px-8 md:px-14  z-0 ">
         <h3 className=" font-semibold text-xl text-green-400">
           !Welcome to {location?.name}
         </h3>

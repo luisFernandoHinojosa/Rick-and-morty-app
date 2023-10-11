@@ -2,11 +2,6 @@ import { useEffect, useState } from "react";
 import { ResidentCard } from "./ResidentCard";
 import { paginationLogic } from "../utils/pagination";
 import { ButtonsToShow } from "../utils/ButtonsToShow";
-import { PreviousNextButton } from "../utils/PreviousNextButton";
-import {
-  IconArrowBigLeftFilled,
-  IconArrowBigRightFilled,
-} from "@tabler/icons-react";
 
 export const ResidentList = ({ residents }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -22,8 +17,8 @@ export const ResidentList = ({ residents }) => {
   console.log("pages", pages);
 
   return (
-    <section className="overflow-hidden bg2">
-      <div className="">
+    <section className="overflow-hidden min-h-screen bg2 relative">
+      <div>
         {residents.length === 0 ? (
           <div className="grid items-center  justify-center w-full h-[200px]">
             <div className="text-white text-2xl font-semibold">
